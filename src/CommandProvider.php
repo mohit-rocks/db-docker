@@ -12,6 +12,9 @@ class CommandProvider implements CommandProviderCapability
      */
     public function getCommands()
     {
-        return [new DbDockerCommand()];
+        return [
+            new DbDockerCommand(),
+            new DbDockerRefreshCommand(),
+        ];
     }
 }
